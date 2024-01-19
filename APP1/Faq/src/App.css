@@ -33,12 +33,15 @@ align-items: center;
     .container{
         
     background-image: url('Assets/background-pattern-mobile.svg'); 
-    
+    background-repeat: no-repeat;
+    background-size:auto 50%; 
         
    }
     .card {
-       
-      background-color: lightblue;
+        width: 300px; /* Set your desired width for the card */
+        padding: 20px;
+        background-color: #ffffff; /* Set your desired background color */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     }
   }
   
