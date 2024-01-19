@@ -1,0 +1,10 @@
+.point{
+    display: flex;
+    align-items: center;
+}
+.tick{
+    padding: 0.1rem;
+}
+.point >p {
+    padding: 0.1rem;
+}
