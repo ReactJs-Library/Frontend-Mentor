@@ -1,6 +1,7 @@
 .point{
     display: flex;
     align-items: center;
+    padding:0.3rem;
 }
 .tick{
     padding: 0.1rem;

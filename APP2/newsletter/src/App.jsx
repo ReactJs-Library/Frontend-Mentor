@@ -18,14 +18,14 @@ function App() {
     })
   }
   return (
-    <>
+    <div className='main'>
       <Routes>
         <Route path='/' element={<Home showpoints={showpoints}></Home>}>
           </Route>
         <Route path='/success' element={<Success/>}></Route>
       </Routes>
       
-    </>
+    </div>
   )
 }
 

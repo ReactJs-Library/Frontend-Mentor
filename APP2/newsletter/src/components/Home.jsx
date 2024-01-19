@@ -8,13 +8,12 @@ export const Home = ({showpoints}) => {
     <div className='container'>
         <div className='content'>
             <img src={mobilesignup} alt='mobilesignup' className='mobilesignup'></img>
-            <h1>Stay updated!</h1>
-            <h3>Join 60,000+ product managers receiving monthly updates on:</h3>
+            <h1 className='heading'>Stay updated!</h1>
+            <h3 className='smallheading'>Join 60,000+ product managers receiving monthly updates on:</h3>
             {showpoints()}
             <InputForm></InputForm>
         </div>
         <img src={desktopsignup} alt='desktopsignup' className='desktopsignup'></img>
-        
     </div>
   )
 }
