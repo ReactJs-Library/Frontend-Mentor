@@ -1,0 +1,14 @@
+.qapair{
+    padding: 0.3rem;
+}
+.question{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sign{
+    width: 1.5rem;
+}
+.answer{
+    color:grey;
+}
