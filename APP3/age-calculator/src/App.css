@@ -1,0 +1,10 @@
+.container{
+
+}
+.arrowsvg{
+    background-color: rgb(133,77,252);
+    border-radius: 50%;
+    padding:0.3rem;
+    width: 3rem;
+    box-sizing: border-box;
+}
