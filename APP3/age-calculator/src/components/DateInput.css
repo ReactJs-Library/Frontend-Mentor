@@ -20,15 +20,15 @@ padding-bottom: 0.7rem;
 }
 
 .miniconatiner>input{
-    font-weight: 900;
-width: 5rem;
+font-weight: 900;
+width: 5.4rem;
 height: 2rem;
 border-radius: 0.2rem;
 border: 1px solid lightgrey;
 color: black;
 }
 .error{
-   color:white;
+    font-size: 0.6em;
 }
 
 .divider{
