@@ -9,8 +9,8 @@ function App() {
   const [months,setMonths]=useState("--")
   const [days,setDays]=useState("--")
   const calculateage=(days,months,years)=>{
-    let ages
-    if(months<10){
+    let ages;
+    if(months<10 && months.length==1){
        ages=BirthAge("0"+months+"/"+days+"/"+years)
     }
     else{

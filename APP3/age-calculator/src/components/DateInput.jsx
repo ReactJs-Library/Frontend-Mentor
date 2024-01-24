@@ -22,23 +22,24 @@ export const DateInput = ({calculateage}) => {
 
 function ProcessDate(days,months,years,calculateage){
 if(days>31 || days<1){
-
+  alert("not a valid date")
 }
 else if(months>12 || months<1){
-  
+  alert("not a valid date")
 }
 else if(new Date().getFullYear()<=years){
-
+  alert("not a valid date")
 }
 else{
   if(isValidDate(days,months,years)){
     calculateage(days,months,years)
   }
   else{
-    
+    alert("not a valid date")
   }
 }
 }
+
 function isValidDate(day, month, year) {
   // Check if the provided values are numbers
   if (isNaN(day) || isNaN(month) || isNaN(year)) {
