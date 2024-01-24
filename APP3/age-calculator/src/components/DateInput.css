@@ -1,5 +1,48 @@
+.input-div{
+display: flex;
+align-items: center;
+justify-content: space-around;
+box-sizing: border-box;
+padding:1.2rem;
+padding-right: 8rem;
+padding-bottom: 0;
+}
+
+.miniconatiner{
+display: flex;
+flex-direction: column;
+
+}
+.miniconatiner>label{
+    font-size: 0.6em;
+color: black;
+padding-bottom: 0.7rem;
+}
+
+.miniconatiner>input{
+    font-weight: 900;
+width: 5rem;
+height: 2rem;
+border-radius: 0.2rem;
+border: 1px solid lightgrey;
+color: black;
+}
+.error{
+   color:white;
+}
+
+.divider{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.line{
+    border: 1px solid lightgrey;
+    width: 75%;
+    height: 0px;
+}
 .arrowsvg{
-    background-color: rgb(133,77,252);
+    background-color: rgb(134,77,254);
     border-radius: 50%;
     padding:0.3rem;
     width: 3rem;

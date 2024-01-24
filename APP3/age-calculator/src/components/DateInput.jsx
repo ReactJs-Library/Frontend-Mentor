@@ -1,31 +1,43 @@
 import React, { useState } from 'react'
 import arrow from '../images/icon-arrow.svg'
+import './DateInput.css'
 export const DateInput = ({calculateage}) => {
   const [days,setDays]=useState("")
   const [months,setMonths]=useState("")
   const [years,setYears]=useState("")
   return (
     <div>
-        <label>DAY</label>
-        <input type='number' onChange={(e)=>{setDays(e.target.value)}} value={days}/>
-
-        <label>MONTH</label>
-        <input type='number' onChange={(e)=>{setMonths(e.target.value)}} value={months}/>
-
-        <label>YEAR</label>
-        <input type='number' onChange={(e)=>{setYears(e.target.value)}} value={years}/>
-
+        <div className='input-div'>
+          <div className='miniconatiner days'>
+            <label>DAY</label>
+            <input type='text' onChange={(e)=>{setDays(e.target.value)}} value={days} placeholder='DD'/>
+            <div className='error' id="errordate">for days</div>
+          </div>
+          <div className='miniconatiner months'>
+            <label>MONTH</label>
+            <input type='text' onChange={(e)=>{setMonths(e.target.value)}} value={months} placeholder='MM'/>
+            <div className='error' id="errormonth">for months</div>
+          </div>
+          <div className='miniconatiner years'>
+            <label>YEAR</label>
+            <input type='text' onChange={(e)=>{setYears(e.target.value)}} value={years} placeholder='YYYY'/>
+            <div className='error' id="erroryear">for years</div>
+          </div>
+        </div>
+        <div className='divider'>
+        <div className='line'></div>
         <img src={arrow} alt='arrowimg' className='arrowsvg' onClick={()=>{ProcessDate(days,months,years,calculateage)}}></img>
+        </div>
     </div>
   )
 }
 
 function ProcessDate(days,months,years,calculateage){
 if(days>31 || days<1){
-  alert("not a valid date")
+  alert("not a valid day")
 }
 else if(months>12 || months<1){
-  alert("not a valid date")
+  alert("not a valid month")
 }
 else if(new Date().getFullYear()<=years){
   alert("not a valid date")

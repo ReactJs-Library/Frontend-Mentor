@@ -26,7 +26,6 @@ function App() {
     <div className='container'>
       <DateInput calculateage={calculateage}/>
       <AgeOutput years={years} months={months} days={days}/>
-      
     </div>
   )
 }
