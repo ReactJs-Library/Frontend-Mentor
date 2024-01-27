@@ -13,13 +13,13 @@ display: flex;
 flex-direction: column;
 
 }
-.miniconatiner>label{
-    font-size: 0.6em;
+.datelabel{
+font-size: 0.6em;
 color: black;
 padding-bottom: 0.7rem;
 }
 
-.miniconatiner>input{
+.dateinput {
 font-weight: 900;
 width: 5.4rem;
 height: 2rem;
@@ -27,8 +27,26 @@ border-radius: 0.2rem;
 border: 1px solid lightgrey;
 color: black;
 }
+
+.errorlabel{
+    color:red;
+}
+.errorfreelabel{
+    color:black;
+}
+.errorinput{
+    border: 2px solid red;
+}
+.errorfreeinput{
+    border: 2px solid lightgray;
+}
+.errorfree{
+    font-size: 0.6rem;
+    color: white;
+}
 .error{
-    font-size: 0.6em;
+    font-size: 0.6rem;
+    color:red
 }
 
 .divider{
