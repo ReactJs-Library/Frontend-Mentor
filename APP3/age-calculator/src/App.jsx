@@ -11,10 +11,20 @@ function App() {
   const calculateage=(days,months,years)=>{
     let ages;
     if(months<10 && months.length==1){
-       ages=BirthAge("0"+months+"/"+days+"/"+years)
+      if(days<10 && days.length==1){
+        ages=BirthAge("0"+months+"/0"+days+"/"+years)
+      }else
+      {
+        ages=BirthAge("0"+months+"/"+days+"/"+years)
+      }
     }
     else{
-      ages=BirthAge(months+"/"+days+"/"+years)
+      if(days<10 && days.length==1){
+        ages=BirthAge(months+"/0"+days+"/"+years)
+      }else
+      {
+        ages=BirthAge(months+"/"+days+"/"+years)
+      }
     }
     
     setDays((curr)=>{return ages.days})
@@ -31,6 +41,7 @@ function App() {
 }
 
 function BirthAge(dateString) {
+  console.log(dateString)
   var now = new Date();
   var today = new Date(now.getYear(),now.getMonth(),now.getDate());
  
