@@ -35,10 +35,10 @@ color: black;
     color:black;
 }
 .errorinput{
-    border: 2px solid red;
+    border: 1px solid red;
 }
 .errorfreeinput{
-    border: 2px solid lightgray;
+    border: 1px solid lightgray;
 }
 .errorfree{
     font-size: 0.6rem;

@@ -1,0 +1,17 @@
+.MainContainer{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    
+    height: 60%;
+    box-sizing: border-box;
+    padding-left: 3rem;
+    font-size: 3.5rem;
+}
+.ageanswer{
+    color: rgb(134,77,254);
+}
+.agetext{
+    font-weight: 750;
+}
