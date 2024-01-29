@@ -20,7 +20,6 @@ export const Navbar = () => {
             </ul>
         </nav>
         <nav className={showmobilenavbar ? `${styles.navmobilecommon} ${styles.navmobileon}` : `${styles.navmobilecommon} ${styles.navmobileoff}`}>
-            
             <img src={close} alt='close' onClick={()=>{dontshowmenu(setShowMobileNavbar)}} className={styles.closebutton}></img>
             <ul className={styles.navmobilebar}>
                 <li>Home</li>
@@ -30,6 +29,9 @@ export const Navbar = () => {
                 <li>Categories</li>
             </ul>
         </nav>
+        <div className={showmobilenavbar ? `${styles.navmobileon_shadow}` : `${styles.navmobileoff_shadow}` } >
+
+        </div>
     </div>
   )
 }

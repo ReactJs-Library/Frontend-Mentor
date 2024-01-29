@@ -2,9 +2,7 @@
     display: flex;
     justify-content:space-between;
     box-sizing: border-box;
-}
-.logo{
-    padding: 1rem;
+    
 }
 
 /* Desktop styles */  
@@ -15,6 +13,7 @@
     .logo{
         height: 3rem;
         width: 5rem;
+        padding: 1rem;
     }
     .navbar{
         display: flex;
@@ -28,11 +27,21 @@
     .navmobilecommon{
         display: none;
     }
+    .navmobileon_shadow{
+        display: none;
+    }
+    .navmobileoff_shadow{
+        display: none;
+    }
 }
 
 /************** mobile styles ***************/
 @media only screen and (max-width: 767px) {
-    
+    .logo{
+        height: 2rem;
+        width: 3rem;
+        padding: 1rem;
+    }
     .navdesktop{
     display: none;
     }
@@ -49,6 +58,9 @@
         right:0;
         background-color: white;
         z-index: 2;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
     }
     .navmobileoff{
         visibility:hidden;
@@ -60,12 +72,41 @@
         opacity: 1;
         transition: visibility 0.5s, opacity 0.5s linear;
     }
-    .closebutton:active{
-        background-color: red;
+    .closebutton{
+        height: 2rem;
+        width: 2rem;
+        padding-left: 2rem;
+        align-self: flex-end;
+        padding: 1rem;
     }
    
+   .navmobileon_shadow{
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    transition: visibility 0.5s, opacity 0.5s linear;
+   }
+   .navmobileoff_shadow{
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    
+    visibility: hidden;
+    transition: visibility 0.5s, opacity 0.5s linear;
+   }
+
    .navmobilebar{
+    align-self: flex-start;
     list-style-type: none;
+    
+    padding: 0;
+   }
+   .navmobilebar>li{
+    padding: 1rem;
    }
 }
   
