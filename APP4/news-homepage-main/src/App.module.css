@@ -1,0 +1,26 @@
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+
+.container{
+    height: 100%;
+    
+}
+
+/* Desktop styles */  
+@media only screen and (min-width: 768px) {
+   
+}
+
+/************** mobile styles ***************/
+@media only screen and (max-width: 767px) {
+   
+  }
+  
+  
