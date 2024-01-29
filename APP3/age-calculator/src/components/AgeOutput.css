@@ -15,3 +15,24 @@
 .agetext{
     font-weight: 750;
 }
+
+@media only screen and (max-width: 767px) {
+    .MainContainer{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        height: 50%;
+        box-sizing: border-box;
+        padding-left: 3rem;
+        font-size: 3rem;
+    }
+    .ageanswer{
+        color: rgb(134,77,254);
+    }
+    .agetext{
+        font-weight: 750;
+    }
+    /* Add more styles specific to smaller screens */
+  }
+  
