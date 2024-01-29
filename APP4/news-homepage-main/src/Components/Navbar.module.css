@@ -6,9 +6,7 @@
 .logo{
     padding: 1rem;
 }
-.navmobile{
-    display: none;
-}
+
 /* Desktop styles */  
 @media only screen and (min-width: 768px) {
     .burgermenu{
@@ -27,22 +25,47 @@
         list-style: none;
         padding: 1rem;
     } 
-    
+    .navmobilecommon{
+        display: none;
+    }
 }
 
 /************** mobile styles ***************/
 @media only screen and (max-width: 767px) {
+    
     .navdesktop{
-display: none;
+    display: none;
     }
     .burgermenu{
         padding:1rem;
         height: 2rem;
         width: 3rem;
     }
-    .navmobilebar{
-        
+
+    .navmobilecommon{
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        right:0;
+        background-color: white;
+        z-index: 2;
+    }
+    .navmobileoff{
+        visibility:hidden;
+        opacity: 0;
+        transition: visibility 0.5s, opacity 0.5s linear;
+    }
+    .navmobileon{
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0.5s, opacity 0.5s linear;
+    }
+    .closebutton:active{
+        background-color: red;
     }
    
+   .navmobilebar{
+    list-style-type: none;
+   }
 }
   
