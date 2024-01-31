@@ -1,0 +1,36 @@
+.container{
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.minicontainer{
+display: flex;
+padding: 1rem;
+}
+.textcontainer{
+    padding: 1rem;
+    line-height: 1.5;
+}.textcontainer>div{
+    padding: 0.5rem;
+}
+.text1{
+    font-size: 2rem;
+    color: grey;
+}
+.text2{
+    font-weight: 800;
+}
+.text3{
+    color:grey;
+}
+/************* Desktop styles **************/
+@media only screen and (min-width: 768px) {
+    .container{
+        display: flex;
+    }
+    
+}
+/************** mobile styles ***************/
+@media only screen and (max-width: 767px) {
+  
+    
+}
