@@ -1,0 +1,41 @@
+.container{
+    background-color: black;
+    padding:1rem;
+    box-sizing: border-box;
+    margin: 1rem;
+    margin-left: 1.5rem;
+}
+h1{
+    margin: 0;
+    color:rgb(251,173,63);
+    
+}
+.minicontainer{
+    color: white;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    padding: 1rem;
+   line-height: 1.5;
+}
+h3{
+    margin: 0;
+}
+@media only screen and (min-width: 768px) {
+    .container{
+        width: 30%;
+    }
+    h1{
+        padding: 1rem 0rem 0rem 1rem;
+    }
+    .minicontainer>h3{
+        font-size: 1.5rem;
+    }
+}
+
+/************** mobile styles ***************/
+@media only screen and (max-width: 767px) {
+    h1{
+        padding: 1rem 0rem 0rem 1rem;
+    }
+    
+}

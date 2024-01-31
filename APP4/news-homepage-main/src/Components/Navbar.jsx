@@ -30,7 +30,6 @@ export const Navbar = () => {
             </ul>
         </nav>
         <div className={showmobilenavbar ? `${styles.navmobileon_shadow}` : `${styles.navmobileoff_shadow}` } >
-
         </div>
     </div>
   )
