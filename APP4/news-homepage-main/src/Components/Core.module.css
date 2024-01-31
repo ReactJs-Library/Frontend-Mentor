@@ -38,7 +38,10 @@
         padding: 0.7rem 2rem 0.7rem 2rem;
         border: 0px solid red;
     }
-
+    .smallcontent>button:hover{
+        background-color: black;
+        color: white;
+    }
 .mobileimage{
     display: none;
 }

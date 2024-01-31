@@ -24,6 +24,10 @@
         list-style: none;
         padding: 1rem;
     } 
+    .navbar >li:hover{
+        color:rgb(238,165,75);
+        cursor: grab;
+    }
     .navmobilecommon{
         display: none;
     }
