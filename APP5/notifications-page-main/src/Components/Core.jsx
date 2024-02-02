@@ -1,6 +1,6 @@
 import React from 'react'
 import { EachNotification } from './EachNotification'
-
+import styles from './Core.module.css'
 export const Core = ({notifications}) => {
     const allnotifications=()=>{
         return notifications.map((notification)=>{
@@ -8,7 +8,7 @@ export const Core = ({notifications}) => {
         })
     }
   return (
-    <div>
+    <div className={styles.container}>
         {allnotifications()}
     </div>
   )
