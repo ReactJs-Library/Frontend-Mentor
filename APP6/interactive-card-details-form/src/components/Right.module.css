@@ -1,7 +1,52 @@
-.container{
-    width: 100%;
+
+
+
+
+
+/* Styles for desktop */
+@media only screen and (min-width: 601px) {
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+    }
+    .minicontainer{
+        width: 30rem;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+    .cardholdercontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .cardholderinput{
+
+    }
+    .cardholdererror{
+        visibility: hidden;
+    }
+    .cardnumbercontainer{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    }
+    .cardnumberlabel{
+
+    }
+    .cardnumberinput{
+
+    }
+    .cardnumberererror{
+        visibility: hidden;
+    }
+}
+  
+
+
+/* Styles for mobile */
+@media only screen and (max-width: 600px) {
+    
 }

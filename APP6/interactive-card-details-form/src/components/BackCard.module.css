@@ -32,8 +32,8 @@
 @media only screen and (max-width: 600px) {
     .container{
         position: absolute;
-        left:20vw;
-        top: 5vh;
+        left:30vw;
+        top: 3vh;
         width: 15rem;
         height: 10rem;
         background-image: url("../images/bg-card-back.png") ;

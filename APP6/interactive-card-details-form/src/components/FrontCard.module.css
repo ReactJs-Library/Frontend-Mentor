@@ -64,8 +64,8 @@
 @media only screen and (max-width: 600px) {
     .container{
         position: absolute;
-        left:5vw;
-        top: 20vh;
+        left:15vw;
+        top: 14vh;
         color:white;
         width: 15rem;
         height: 10rem;
@@ -107,7 +107,7 @@
         margin-top: 2rem;
         box-sizing: border-box;
        font-stretch:extra-expanded;
-       letter-spacing: 0.1rem;
+       letter-spacing: 0.06rem;
        
     }
     .cardnamedate{
