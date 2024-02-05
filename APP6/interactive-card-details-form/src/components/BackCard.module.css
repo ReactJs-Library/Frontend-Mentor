@@ -10,9 +10,20 @@
         background-repeat: no-repeat;
         background-size: contain;
     }
-    .backimage{
-        width:20rem;
+    .cvv{
+       
+        color: white;
+        
+    } 
+    .cvvalighner{
+        margin-top: 4.6rem;
+        padding-right:2.2rem;
+        display: flex;
+        justify-content:flex-end;
+        box-sizing: border-box;
+      
     }
+
 }
   
 
@@ -21,10 +32,25 @@
 @media only screen and (max-width: 600px) {
     .container{
         position: absolute;
-        left:3vw;
-        top: 10vh;
+        left:20vw;
+        top: 5vh;
+        width: 15rem;
+        height: 10rem;
+        background-image: url("../images/bg-card-back.png") ;
+        background-repeat: no-repeat;
+        background-size: contain;
+       
     }
-    .backimage{
-        width:15rem;
+    .cvv{
+        color: white;
+    } 
+    .cvvalighner{
+        margin-top: 3.4rem;
+        padding-right:1.8rem;
+        font-size: 0.9rem;
+        display: flex;
+        justify-content:flex-end;
+        box-sizing: border-box;
+      
     }
 }
