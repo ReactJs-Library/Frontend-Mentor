@@ -47,7 +47,6 @@ export const Right = ({setCardNumber,setCardName,setDate,setCvv}) => {
                   <div className={cvcerror.error ? styles.cvcerror : styles.cvcnoerror}>{cvcerror.message}</div>
               </div>
           </div>
-
           <button onClick={()=>{validateForm(navigate,cardnameerror,setCardNameError,cardnumbererror,setCardNumberError,expdatemmerror,setExpDateMMError,yyerror,setYYError,cvcerror,setCvcError)}} className={styles.confirmbutton}>Confirm</button>
       </div>
         
@@ -55,18 +54,16 @@ export const Right = ({setCardNumber,setCardName,setDate,setCvv}) => {
   )
 }
 const validateForm = (navigate, cardnameerror, setCardNameError, cardnumbererror, setCardNumberError, expdatemmerror, setExpDateMMError, yyerror, setYYError, cvcerror, setCvcError) => {
-  // Regular expressions for validation
+
   const cardNameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
   const cardNumberRegex = /^\d{12,19}$/;
   const expDateMMRegex = /^(0[1-9]|1[0-2])$/;
   const cvcRegex = /^\d{3,4}$/;
-  const yyRegex =/^\d{2}$/; // MM/YY format
-
-  
-
-  // Validation logic
+  const yyRegex =/^\d{2}$/; 
   let isValid = true;
 
+
+  
   if (!cardNameRegex.test(cardnameerror.input)) {
     setCardNameError({ error: false, message: "Invalid card name" ,input:cardnameerror.input});
     isValid = false;
