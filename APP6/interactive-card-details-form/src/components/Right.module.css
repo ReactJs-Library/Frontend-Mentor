@@ -4,17 +4,34 @@
 
 
 /* Styles for desktop */
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 768px) {
     .container{
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: red;
+        font-size: 0.8rem;
+        box-sizing: border-box;
+
+    }
+    label{
+        margin: 0.1rem;
+        display: block;
+    }
+    input{
+        box-sizing: border-box;
+        border-radius: 0.3rem;
+        padding: 0.3rem;
+        margin:0.1rem;
+        width: 100%;
+    }
+    input:focus{
+        outline: none;
+        border: 2px solid rgb(97,8,151);
     }
     .minicontainer{
-        width: 30rem;
+        width: 30vw;
         background-color: #fff;
         display: flex;
         flex-direction: column;
@@ -29,6 +46,10 @@
     .cardholdererror{
         visibility: hidden;
     }
+    .cardholdernoerror{
+        
+    }
+
     .cardnumbercontainer{
     display: flex;
     flex-direction: column;
@@ -39,14 +60,179 @@
     .cardnumberinput{
 
     }
-    .cardnumberererror{
+
+    .cardnumbererror{
         visibility: hidden;
+    }
+    .cardnumbernoerror{
+        
+    }
+    
+    .singlebandinput{
+        display: flex;
+        
+        font-size: 0.8rem;
+    }   
+    .singlebandinput>div{
+      
+        padding: 0.3rem;
+        
+    }
+    .singlebandinput1{
+        flex:1;
+
+    }
+    .singlebandinput2{
+        flex: 1;
+
+    }
+    .singlebandinput3{
+        flex:5;
+        
+    }
+
+
+    .expdateerror{
+        visibility: hidden;
+    }
+    .expdatenoerror{
+
+    }
+    .mm_yyerror{
+        visibility: hidden;
+    }
+    .mm_yynoerror{
+
+    }
+    .cvcerror{
+        visibility: hidden;
+    }
+    .cvcnoerror{
+
+    }
+
+    button{
+        background-color: hsl(278, 68%, 11%);
+        color:white;
+        padding: 0.7rem;
+        border-radius: 0.3rem;
     }
 }
   
 
 
 /* Styles for mobile */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
+    .container{
+        margin-top: 5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        box-sizing: border-box;
+    }
+    label{
+        margin: 0.1rem;
+        display: block;
+    }
+    input{
+        box-sizing: border-box;
+        border-radius: 0.3rem;
+        padding: 0.3rem;
+        margin:0.1rem;
+        width: 100%;
+    }
+    input:focus{
+        outline: none;
+        border: 2px solid rgb(97,8,151);
+    }
+    .minicontainer{
+        width: 30vw;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+    }
+    .cardholdercontainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .cardholderinput{
+
+    }
+    .cardholdererror{
+        visibility: hidden;
+    }
+    .cardholdernoerror{
+        
+    }
+
+    .cardnumbercontainer{
+    display: flex;
+    flex-direction: column;
+    }
+    .cardnumberlabel{
+
+    }
+    .cardnumberinput{
+
+    }
+
+    .cardnumbererror{
+        visibility: hidden;
+    }
+    .cardnumbernoerror{
+        
+    }
     
+    .singlebandinput{
+        display: flex;
+        
+        font-size: 0.8rem;
+    }   
+    .singlebandinput>div{
+      
+        padding: 0.3rem;
+        
+    }
+    .singlebandinput1{
+        flex:1;
+
+    }
+    .singlebandinput2{
+        flex: 1;
+
+    }
+    .singlebandinput3{
+        flex:5;
+        
+    }
+
+
+    .expdateerror{
+        visibility: hidden;
+    }
+    .expdatenoerror{
+
+    }
+    .mm_yyerror{
+        visibility: hidden;
+    }
+    .mm_yynoerror{
+
+    }
+    .cvcerror{
+        visibility: hidden;
+    }
+    .cvcnoerror{
+
+    }
+
+    button{
+        background-color: hsl(278, 68%, 11%);
+        color:white;
+        padding: 0.7rem;
+        border-radius: 0.3rem;
+    }
 }
