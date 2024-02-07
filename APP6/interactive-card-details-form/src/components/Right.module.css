@@ -1,7 +1,21 @@
 
 
+.cardholderinputerror{
+    border: 2px solid red;
+}
 
-
+.cardnumberinputerror{
+    border: 2px solid red;
+}
+.expdateinputerror{
+    border: 2px solid red;
+}
+.mm_yyinputerror{
+    border: 2px solid red;
+}
+.cvcinputerror{
+    border: 2px solid red;
+}
 
 /* Styles for desktop */
 @media only screen and (min-width: 768px) {
@@ -47,7 +61,7 @@
         visibility: hidden;
     }
     .cardholdernoerror{
-        
+        color:red
     }
 
     .cardnumbercontainer{
@@ -65,7 +79,7 @@
         visibility: hidden;
     }
     .cardnumbernoerror{
-        
+        color:red
     }
     
     .singlebandinput{
@@ -96,19 +110,19 @@
         visibility: hidden;
     }
     .expdatenoerror{
-
+        color:red
     }
     .mm_yyerror{
         visibility: hidden;
     }
     .mm_yynoerror{
-
+        color:red
     }
     .cvcerror{
         visibility: hidden;
     }
     .cvcnoerror{
-
+        color:red
     }
 
     .confirmbutton{

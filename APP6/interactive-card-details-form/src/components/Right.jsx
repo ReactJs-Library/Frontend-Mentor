@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Right.module.css'
 import {useNavigate} from 'react-router-dom'
-export const Right = () => {
+export const Right = ({setCardNumber,setCardName,setDate,setCvv}) => {
+ 
   const [cardnameerror,setCardNameError]=useState({error:true,message:"no error",input:""})
   const [cardnumbererror,setCardNumberError]=useState({error:true,message:"no error",input:""})
   const [expdatemmerror,setExpDateMMError]=useState({error:true,message:"no error",input:""})
   const [yyerror,setYYError]=useState({error:true,message:"no error",input:""})
   const [cvcerror,setCvcError]=useState({error:true,message:"no error",input:""})
- 
-    const navigate=useNavigate()
+  useEffect(()=>{
+    if(expdatemmerror.input!="" && yyerror.input!=""){
+      setDate(expdatemmerror.input+"/"+yyerror.input)
+    }
+  },[expdatemmerror,yyerror])
+  const navigate=useNavigate()
   
  
   return (
@@ -16,29 +21,29 @@ export const Right = () => {
       <div className={styles.minicontainer}>
           <div className={styles.cardholdercontainer}>
               <label className={styles.cardholderlabel}>CARDHOLDER NAME</label>
-              <input type='text' max={32} className={styles.cardholderinput} onChange={(e)=>{setCardNameError({...cardnameerror,input:e.target.value})}} value={cardnameerror.input}></input>
+              <input type='text' maxLength={20} className={cardnameerror.error ? `${styles.cardholderinput}` : `${styles.cardholderinputerror} ${styles.cardholderinput}`} onChange={(e)=>{setCardNameError({...cardnameerror,input:e.target.value});setCardName(e.target.value)}} value={cardnameerror.input} placeholder='vishal gandla'></input>
               <div className={cardnameerror.error ? styles.cardholdererror : styles.cardholdernoerror}>{cardnameerror.message} </div>
           </div>
           <div className={styles.cardnumbercontainer}>
               <label className={styles.cardnumberlabel}>CARD NUMBER</label>
-              <input type='text' max={32} className={styles.cardnumberinput} onChange={(e)=>{setCardNumberError({...cardnumbererror,input:e.target.value})}} value={cardnumbererror.input}></input>
+              <input type='text' maxLength={20} className={cardnumbererror.error ? `${styles.cardnumberinput}` : `${styles.cardnumberinputerror} ${styles.cardnumberinput}`} onChange={(e)=>{setCardNumberError({...cardnumbererror,input:e.target.value});setCardNumber(e.target.value)}} value={cardnumbererror.input} placeholder='9123 6388 2482 7638'></input>
               <div className={cardnumbererror.error ? styles.cardnumbererror : styles.cardnumbernoerror}>{cardnumbererror.message} </div>
           </div>
           
           <div className={styles.singlebandinput}>
               <div className={styles.singlebandinput1}>
                   <label>EXP.MM</label>
-                  <input type='text' className={styles.expdateinput} onChange={(e)=>{setExpDateMMError({...expdatemmerror,input:e.target.value})}} value={expdatemmerror.input}></input>
+                  <input type='text' maxLength={2} className={expdatemmerror.error ? `${styles.expdateinput}` : `${styles.expdateinputerror} ${styles.expdateinput}`} onChange={(e)=>{setExpDateMMError({...expdatemmerror,input:e.target.value})}} value={expdatemmerror.input} placeholder='MM'></input>
                   <div className={expdatemmerror.error ? styles.expdateerror : styles.expdatenoerror}>{expdatemmerror.message}</div>
               </div>
               <div className={styles.singlebandinput2}>
                   <label>EXP.YY</label>
-                  <input type='text' className={styles.mm_yy} onChange={(e)=>{setYYError({...yyerror,input:e.target.value})}} value={yyerror.input}></input>
+                  <input type='text' maxLength={2} className={yyerror.error ? `${styles.mm_yy}` : `${styles.mm_yyinputerror} ${styles.mm_yy}`} onChange={(e)=>{setYYError({...yyerror,input:e.target.value})}} value={yyerror.input} placeholder='YY'></input>
                   <div className={yyerror.error ? styles.mm_yyerror : styles.mm_yynoerror}>{yyerror.message}</div>
               </div>
               <div className={styles.singlebandinput3}>
                   <label>cvc</label>
-                  <input type='text' className={styles.cvc} onChange={(e)=>{setCvcError({...cvcerror,input:e.target.value})}} value={cvcerror.input}></input>
+                  <input type='text' maxLength={3} className={cvcerror.error ? `${styles.cvc}` : `${styles.cvcinputerror} ${styles.cvc}`} onChange={(e)=>{setCvcError({...cvcerror,input:e.target.value});setCvv(e.target.value)}} value={cvcerror.input} placeholder='e.g. 123'></input>
                   <div className={cvcerror.error ? styles.cvcerror : styles.cvcnoerror}>{cvcerror.message}</div>
               </div>
           </div>
@@ -53,9 +58,9 @@ const validateForm = (navigate, cardnameerror, setCardNameError, cardnumbererror
   // Regular expressions for validation
   const cardNameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/;
   const cardNumberRegex = /^\d{12,19}$/;
-  const expDateRegex = /^(0[1-9]|1[0-2])$/;
+  const expDateMMRegex = /^(0[1-9]|1[0-2])$/;
   const cvcRegex = /^\d{3,4}$/;
-  const mm_yyRegex =/^\d{2}$/; // MM/YY format
+  const yyRegex =/^\d{2}$/; // MM/YY format
 
   
 
@@ -80,7 +85,7 @@ const validateForm = (navigate, cardnameerror, setCardNameError, cardnumbererror
   }
 
 
-  if (!expDateRegex.test(expdatemmerror.input)) {
+  if (!expDateMMRegex.test(expdatemmerror.input)) {
     setExpDateMMError({ error: false, message: "Invalid expiration date",input:expdatemmerror.input });
     isValid = false;
   }
@@ -88,7 +93,7 @@ const validateForm = (navigate, cardnameerror, setCardNameError, cardnumbererror
     setExpDateMMError({ error: true, message: "Invalid expiration date",input:expdatemmerror.input });
   }
 
-  if (!mm_yyRegex.test(yyerror.input)) {
+  if (!yyRegex.test(yyerror.input)) {
     setYYError({ error: false, message: "Invalid MM/YY format",input:yyerror.input });
     isValid = false;
   } else {
