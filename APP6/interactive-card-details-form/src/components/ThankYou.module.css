@@ -1,3 +1,78 @@
-.container{
-    background-color: red;
+
+.thankyou{
+    padding: 0.3rem;
+    font-size: 2.3rem;;
+}
+
+.informativetext{
+color: gray;
+padding: 0.3rem;
+padding-bottom: 2rem;
+}
+.tickmark{
+ width: 4rem;       
+}
+/* Styles for desktop */
+@media only screen and (min-width: 768px) {
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        box-sizing: border-box;
+
+    }
+    .minicontainer{
+        width: 30vw;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .continuebutton{
+        background-color: hsl(278, 68%, 11%);
+        color:white;
+        padding: 0.7rem;
+        border-radius: 0.3rem;
+        width: 100%;
+    }
+   
+}
+  
+
+
+/* Styles for mobile */
+@media only screen and (max-width: 767px) {
+    .container{
+        margin-top: 5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        box-sizing: border-box;
+        
+    }
+    .minicontainer{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+    }
+    .continuebutton{
+        background-color: hsl(278, 68%, 11%);
+        color:white;
+        padding: 0.7rem;
+        border-radius: 0.3rem;
+        width: 100%;
+    }
+    .tickmark{
+       
+    }
 }

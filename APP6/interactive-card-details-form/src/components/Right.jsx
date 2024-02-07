@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Right.module.css'
+import {useNavigate} from 'react-router-dom'
 export const Right = () => {
   const [cardnameerror,setCardNameError]=useState({error:true,message:"no error"})
   const [cardnumbererror,setCardNumberError]=useState({error:true,message:"no error"})
   const [expdateerror,setExpDateError]=useState({error:true,message:"no error"})
   const [mm_yyerror,setMMYYError]=useState({error:true,message:"no error"})
   const [cvcerror,setCvcError]=useState({error:true,message:"no error"})
+ 
+    const navigate=useNavigate()
+  
+ 
   return (
     <div className={styles.container}>
       <div className={styles.minicontainer}>
@@ -38,7 +43,7 @@ export const Right = () => {
               </div>
           </div>
 
-          <button >Confirm</button>
+          <button onClick={()=>{navigate("/submit")}} className={styles.confirmbutton}>Confirm</button>
       </div>
         
     </div>

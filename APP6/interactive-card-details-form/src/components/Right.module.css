@@ -111,7 +111,7 @@
 
     }
 
-    button{
+    .confirmbutton{
         background-color: hsl(278, 68%, 11%);
         color:white;
         padding: 0.7rem;
@@ -123,16 +123,7 @@
 
 /* Styles for mobile */
 @media only screen and (max-width: 767px) {
-    .container{
-        margin-top: 5rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.8rem;
-        box-sizing: border-box;
-    }
+    
     label{
         margin: 0.1rem;
         display: block;
@@ -148,9 +139,20 @@
         outline: none;
         border: 2px solid rgb(97,8,151);
     }
+    .container{
+        margin-top: 5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        box-sizing: border-box;
+        
+    }
     .minicontainer{
-        width: 30vw;
-        background-color: #fff;
+        box-sizing: border-box;
+        padding: 2rem;
         display: flex;
         flex-direction: column;
     }
@@ -229,7 +231,7 @@
 
     }
 
-    button{
+    .confirmbutton{
         background-color: hsl(278, 68%, 11%);
         color:white;
         padding: 0.7rem;
