@@ -1,0 +1,137 @@
+.container{
+    padding: 0.3rem; 
+    box-sizing: border-box;
+}
+.heading{
+    padding:0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-bottom: 0.5rem;
+}
+
+.chartwithHeadings{
+    width: 70%;
+}
+.chartHeading{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding:0.5rem 1rem 0.1rem 1rem;
+    align-items: center;
+}
+.chart{
+    height:25vh;
+    padding:0.5rem 1rem 0.1rem 1rem;
+}
+
+.wholechart{ 
+    margin:0 1rem;
+    display: flex;
+    background-color:rgb(244,240,254) ;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+.threeValues{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.threeValues>div>img{
+    width: 5rem;
+    height: 5rem;
+}
+.threeValues>div{
+    width: 25%;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    box-sizing: border-box;
+    padding:0.5rem;
+}
+.respiratory{
+background-color: #E0F3FA;
+
+}
+.temperature{
+    background-color: #FFE6E9;
+}
+.heartBpm{
+background-color: #FFE6F1;
+}
+.nameValue{
+    padding:0.3rem;
+}
+.actualValue{
+    padding-bottom:0.3rem;
+    padding-left:0.3rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.ValueStatus{
+    font-size: 0.7rem;
+    padding:0.2rem;
+
+}
+.upArrow{
+
+width: 10px;
+height: 5px;
+transform: matrix(-1, 0, 0, -1, 0, 0);
+/* UI Properties */
+background: transparent url('../../public/ArrowUp.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin:0.2rem;
+box-sizing: border-box;
+}
+.downArrow{
+width: 10px;
+height: 5px;
+/* UI Properties */
+background: transparent url('../../public/ArrowDown.png') 0% 0% no-repeat padding-box;
+opacity: 1;
+margin:0.2rem;
+box-sizing: border-box;
+}
+.pinkdot{
+
+    width: 0.7rem;
+    height: 0.7rem;
+border: 1px solid var(--unnamed-color-ffffff);
+background: #E66FD2 0% 0% no-repeat padding-box;
+border: 1px solid #FFFFFF;
+opacity: 1;
+border-radius: 50%;
+margin-right: 0.3rem;
+
+}
+.bluedot{
+
+width: 0.7rem;
+height: 0.7rem;
+border: 1px solid var(--unnamed-color-ffffff);
+background: #8C6FE6 0% 0% no-repeat padding-box;
+border: 1px solid #FFFFFF;
+opacity: 1;
+border-radius: 50%;
+margin-right: 0.3rem;
+}
+.twoValues{
+    width: 30%;
+}
+.systolic{
+    margin:0.3rem;
+    padding:0.3rem;
+border-bottom: 1px solid grey;
+}
+.systolic>div{
+    padding:0.3rem 0;
+}
+.diastolic{
+    margin:0.3rem;
+    padding:0.3rem;
+}
+.diastolic>div{
+    padding:0.3rem 0;
+}
+.bpValues{
+    font-size: 1.5rem;
+}

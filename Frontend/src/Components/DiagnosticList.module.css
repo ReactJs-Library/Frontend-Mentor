@@ -1,0 +1,45 @@
+.diagnosticTable{
+    border-radius: 1rem;
+}
+.tableHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F6F7F8;
+    padding:0.3rem;
+
+}
+.tableBody{
+    overflow-y: scroll;
+    height: 3rem;
+    scrollbar-color: rgb(0,0,0) rgb(227,228,230);
+    scrollbar-width:thin;
+}
+.tableRow{
+    padding:0.1rem;
+    display: flex;
+    align-items: center;
+    height:100%;
+    justify-content: space-between;
+}
+
+
+
+.tableBody::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.tableBody::-webkit-scrollbar-track {
+    background: #E3E4E6;
+    border-radius: 50%; /* Make the track edges rounded */
+}
+
+.tableBody::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 50%; /* Make the thumb edges rounded */
+    border: 2px solid #E3E4E6; /* Add a little space around the thumb */
+}
+.tableBody::-webkit-scrollbar-button {
+    display: none;
+}
+

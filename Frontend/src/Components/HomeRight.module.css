@@ -1,0 +1,100 @@
+.container{
+    width: 25%;
+    margin-left: 1rem;
+}
+
+.minicontainer1{
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    height: 70vh;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding:1rem;    
+    font-size: 14px;
+}
+.profileImage{
+    padding-top:1rem;
+    width: 8rem;
+    height: 8rem;
+}
+.patientName{
+font-weight: 900;
+}
+.detailText{
+padding-left:1.5rem;
+}
+.detailValue{
+    font-weight: 550;
+}
+.detailItem{
+
+    display: flex;
+    align-items: center;
+    padding:0.5rem;
+    box-sizing: border-box;
+}
+.button{
+    background-color:rgb(1,240,208);
+    margin: 1rem;
+    padding:0.6rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+.minicontainer2{
+    box-shadow: 1px 1px 1px 1px lightgrey;
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    padding:1rem;
+    height:15vh;
+    display: flex;
+    flex-direction: column;
+}
+.labresultsheader{
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.3rem;
+}
+
+.tests{
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    flex:1;
+    scrollbar-color: black #E3E4E6;
+
+}
+.test{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0.3rem;
+
+}
+.test>img{
+    cursor: pointer;
+}
+
+
+
+.tests::-webkit-scrollbar {
+    width: 8px; /* Adjust the width of the scrollbar */
+}
+
+.tests::-webkit-scrollbar-track {
+    background: #E3E4E6;
+    border-radius: 50%; /* Make the track edges rounded */
+}
+
+.tests::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 50%; /* Make the thumb edges rounded */
+    border: 2px solid #E3E4E6; /* Add a little space around the thumb */
+}
+.tests::-webkit-scrollbar-button {
+    display: none;
+}

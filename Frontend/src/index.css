@@ -1,0 +1,10 @@
+:root{
+   --primary-white:rgb(246,247,248);
+   --primary-green:rgb(1,240,208);
+   
+}
+body{
+   font-family: 'Manrope',sans-serif;
+   overflow: hidden;
+   background-color: var(--primary-white);
+}
